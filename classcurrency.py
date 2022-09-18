@@ -1,5 +1,10 @@
 class Currency:
 
+    def readDetail(self):
+        rs = int(input("Enter amount in Ruppee :"))
+        paisa = int(input("Enter amount in Paise :"))
+        self.total = rs * 100 + paisa
+
     def __init__(self, rs, paisa):
         self.total = rs * 100 + paisa
 
@@ -63,18 +68,18 @@ class Currency:
 
 c1 = Currency(3, 10)
 c2 = Currency(2, 50)
-print(c1, c2)
-c = c1 + c2
-print(c)
-sub = c1 - c2
-print(sub)
-print(c1 * c2)
-print(c1 < c2)
-print(c1 > c2)
-print(c1[0])
-print(c1[1])
-print(len(c1))
-for i in range(len(c1)):
-    print(c1[i])
-for c in c1:
-    print(c)
+# print(c1, c2)
+# c = c1 + c2
+# print(c)
+# sub = c1 - c2
+# print(sub)
+# print(c1 * c2)
+# print(c1 < c2)
+# print(c1 > c2)
+# print(c1[0])
+# print(c1[1])
+# print(len(c1))
+# for i in range(len(c1)):
+#     print(c1[i])
+# for c in c1:
+#     print(c)
