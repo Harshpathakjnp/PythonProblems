@@ -1,20 +1,15 @@
 import classcurrency
-import personpage
-
-
 class BankAccount:
     def __int__(self):
-        self.name = personpage.Person()
+        self.name = ""
         self.age = ""
-        self.bal = classcurrency.Currency(0, 0)
+        self.bal = classcurrency.Currency(0,0)
         self.account = ""
 
     def readDetails(self):
-        n = personpage.Person()
-        n.readperson()
-        self.name = n
+        self.name = input("Enter the Name of Account Holder :")
         self.age = int(input("Account Holder Age :"))
-        c = classcurrency.Currency(0, 0)
+        c=classcurrency.Currency(0,0)
         c.readDetail()
         self.bal = c
         self.account = int(input("Enter Account Number :"))
@@ -27,10 +22,8 @@ class BankAccount:
         k = int(input("Enter Account No. to Search :"))
         for detail in li:
             if detail.account == k:
-                c = classcurrency.Currency(0, 0)
-                c.readDetail()
-                m = c
-                if m.total <= 0:
+                m = int(input("Enter Amount to Deposit :"))
+                if m <= 0:
                     print("You Can't Deposit This Money")
                     continue
                 detail.bal += m
@@ -39,10 +32,8 @@ class BankAccount:
         k = int(input("Enter Account No. to Search :"))
         for detail in li:
             if detail.account == k:
-                c = classcurrency.Currency(0, 0)
-                c.readDetail()
-                m = c
-                if m.total<= 0:
+                m = int(input("Enter Amount to Withdraw :"))
+                if m >= 0:
                     print("You Can't Withdraw This Money")
                     continue
                 detail.bal -= m
